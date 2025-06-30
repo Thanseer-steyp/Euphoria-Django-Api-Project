@@ -1,0 +1,3491 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+ol,
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+#userName {
+  position: absolute;
+  top: 85px;
+  right: 178px;
+  display: none;
+}
+#userName.activeShow {
+  display: block;
+}
+
+/* HEADER SECTION */
+header {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  width: 90px;
+  flex-shrink: 0;
+}
+header h1 a {
+  display: block;
+  width: 100%;
+}
+header h1 a img {
+  display: block;
+  width: 100%;
+}
+header ul.middle {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+header ul.middle li {
+  display: flex;
+  align-items: center;
+}
+header div.menubar {
+  width: 30px;
+  height: 30px;
+  transition: transform 1s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+header div.menubar.an {
+  transform: translateX(12px);
+}
+header div.menubar div.singleBar1 {
+  width: 100%;
+  background-color: grey;
+  opacity: 60%;
+  height: 5px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+header div.menubar div.singleBar1.an {
+  transform: rotate(45deg) translateY(17.5px);
+}
+header div.menubar div.singleBar2 {
+  width: 100%;
+  background-color: grey;
+  opacity: 60%;
+  height: 5px;
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+header div.menubar div.singleBar2.an {
+  width: 0;
+}
+header div.menubar div.singleBar3 {
+  width: 100%;
+  background-color: grey;
+  opacity: 60%;
+  height: 5px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+header div.menubar div.singleBar3.an {
+  transform: rotate(-45deg) translateY(-17.5px);
+}
+header ul.middle li.active a {
+  color: black;
+  font-weight: bold;
+}
+header ul.middle li a {
+  text-decoration: none;
+  color: #807d7e;
+  font-weight: 500;
+  font-size: 22px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+header ul.middle li a:hover {
+  color: #3c4242;
+}
+header ul.right {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  align-items: center;
+}
+header ul.right li {
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+header ul.right li.input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-right: 70px;
+}
+header ul.right li.input input {
+  border: none;
+  background-color: #f6f6f6;
+  font-size: 16px;
+}
+header ul.right li.input input:focus {
+  outline: none;
+}
+header ul.right li a,
+header ul.right li button {
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  padding: 12px;
+  border: none;
+}
+header ul.right li a img,
+header ul.right li button img {
+  display: block;
+  width: 16px;
+}
+#userProfileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* HOME SLIDER SECTION */
+section.slider-section {
+  width: 100%;
+}
+section.slider-section div.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+section.slider-section div.slider-container div.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 1s ease;
+}
+section.slider-section div.slider-container div.slider div.slide {
+  min-width: 100%;
+  transition: 0.5s;
+  overflow: hidden;
+}
+section.slider-section div.slider-container div.slider div.slide1 {
+  /* background-image: url(../assets/bg-1.jpg); */
+  background-position: center;
+  background-size: cover;
+}
+section.slider-section div.slider-container div.slider div.slide1 .content {
+  padding: 250px 0px 250px 180px;
+  font-family: sans-serif;
+  color: white;
+}
+section.slider-section div.slider-container div.slider div.slide1 .content h5 {
+  font-size: 32px;
+  font-weight: 500;
+}
+section.slider-section div.slider-container div.slider div.slide1 .content h1 {
+  font-size: 78px;
+  font-weight: 700;
+  margin: 55px 0;
+  width: 33%;
+}
+section.slider-section div.slider-container div.slider div.slide1 .content h4 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 65px;
+}
+section.slider-section
+  div.slider-container
+  div.slider
+  div.slide1
+  .content
+  a.button {
+  padding: 16px 72px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #3c4242;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 8px;
+}
+section.slider-section div.slider-container div.slider div.slide2 {
+  /* background-image: url(../assets/bg-2.jpg); */
+  background-size: cover;
+  background-position: center;
+}
+section.slider-section div.slider-container div.slider div.slide2 .content {
+  padding: 250px 0px 250px 180px;
+  font-family: sans-serif;
+  color: white;
+}
+section.slider-section div.slider-container div.slider div.slide2 .content h5 {
+  font-size: 32px;
+  font-weight: 500;
+}
+section.slider-section div.slider-container div.slider div.slide2 .content h1 {
+  font-size: 78px;
+  font-weight: 700;
+  margin: 55px 0;
+  width: 35%;
+}
+section.slider-section div.slider-container div.slider div.slide2 .content h4 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 65px;
+}
+section.slider-section
+  div.slider-container
+  div.slider
+  div.slide2
+  .content
+  a.button {
+  padding: 16px 72px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #3c4242;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 8px;
+}
+section.slider-section div.slider-container div.slider div.slide3 {
+  /* background-image: url(../assets/bg-2.jpg); */
+  background-size: cover;
+}
+section.slider-section div.slider-container div.slider div.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+section.slider-section img {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+section.slider-section div.slider-container img.prev {
+  left: 25px;
+}
+section.slider-section div.slider-container img.next {
+  right: 25px;
+}
+.dots-container {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.dot {
+  width: 30px;
+  height: 10px;
+  display: block;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dot.active {
+  background-color: white;
+}
+/* EXPLORE SECTION */
+section#explore {
+  padding: 100px 0;
+}
+section#explore section.wrapper section.exploreItems {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+section#explore section.wrapper section.exploreItems div.left {
+  width: 49%;
+  /* background-image: url(../assets/bg-2.jpg); */
+  padding: 70px 0px 70px 60px;
+  border-radius: 12px;
+  background-size: 970px 700px;
+  box-shadow: 1px 1px 8px 1px rgb(0, 0, 0, 0.3);
+}
+section#explore section.wrapper section.exploreItems h6 {
+  font-size: 18px;
+  font-weight: bold;
+}
+section#explore section.wrapper section.exploreItems h2 {
+  font-size: 34px;
+  font-weight: bolder;
+  width: 40%;
+  margin: 30px 0;
+}
+section#explore section.wrapper section.exploreItems h3 {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+section#explore section.wrapper section.exploreItems a {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid white;
+}
+section#explore section.wrapper section.exploreItems div.right {
+  width: 49%;
+  /* background-image: url(../assets/bg-3.jpg); */
+  padding: 70px 0px 70px 60px;
+  border-radius: 12px;
+  background-size: 880px 560px;
+  box-shadow: 1px 1px 8px 1px rgb(0, 0, 0, 0.3);
+}
+/* NEW ARRIVAL SECTION */
+section#arrival {
+  padding-bottom: 90px;
+}
+section#arrival section.newArrival div.top {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-bottom: 60px;
+}
+section#arrival section.newArrival div.top div.violet {
+  width: 6px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #8a33fd;
+  margin-right: 12px;
+}
+section#arrival section.newArrival div.top h3 {
+  font-size: 34px;
+  font-weight: 550;
+  color: #3c4242;
+}
+section#arrival section.newArrival div.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+}
+#arrival #prevBtn,
+#arrival #nextBtn {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+section#arrival section.newArrival div.slider-container div.slider {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+section#arrival
+  section.newArrival
+  div.slider-container
+  div.slider
+  div.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+section#arrival
+  section.newArrival
+  div.slider-container
+  div.slider
+  div.slider-track
+  div.slide {
+  flex: 0 0 25%;
+  padding: 20px;
+  text-align: center;
+}
+section#arrival
+  section.newArrival
+  div.slider-container
+  div.slider
+  div.slider-track
+  div.slide
+  img {
+  width: 100%;
+  height: 380px;
+  display: block;
+  border-radius: 8px;
+}
+section#arrival
+  section.newArrival
+  div.slider-container
+  div.slider
+  div.slider-track
+  div.slide
+  h3 {
+  font-size: 20px;
+  color: #3c4242;
+  margin-top: 18px;
+}
+
+/* BANNER SECTION */
+section#banner {
+  padding-bottom: 90px;
+}
+section#banner section.banner {
+  display: flex;
+}
+section#banner section.banner div.left {
+  /* background-image: url(../assets/bg-4.jpg); */
+  background-size: cover;
+  width: 50%;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+section#banner section.banner div.left div.content {
+  padding-left: 80px;
+}
+section#banner section.banner div.left div.content h2 {
+  font-size: 34px;
+  font-weight: bolder;
+  width: 75%;
+  color: white;
+}
+section#banner section.banner div.left div.content p {
+  font-size: 20px;
+  color: white;
+  width: 65%;
+  margin: 40px 0 60px;
+}
+section#banner section.banner div.left div.content a.button {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 44px;
+  background-color: white;
+  border-radius: 8px;
+  color: #3c4242;
+}
+section#banner section.banner div.right {
+  width: 50%;
+}
+section#banner section.banner div.right img {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+section#categoryMen {
+  padding-bottom: 50px;
+}
+
+/* MENS CATEGORY SECTION */
+section#categoryMen section.categoryMen {
+}
+section#categoryMen section.categoryMen div.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+section#categoryMen section.categoryMen div.top div.violet {
+  width: 6px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #8a33fd;
+  margin-right: 12px;
+}
+section#categoryMen section.categoryMen div.top h3 {
+  font-size: 34px;
+  font-weight: 550;
+  color: #3c4242;
+}
+section#categoryMen section.categoryMen div.bottom {
+}
+section#categoryMen section.categoryMen div.bottom ul.products {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section#categoryMen section.categoryMen div.bottom ul.products li {
+  width: 21%;
+  margin-bottom: 40px;
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productImage {
+  height: 420px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productImage
+  img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.left {
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.left
+  h4 {
+  color: #2a2f2f;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.left
+  a {
+  color: #7f7f7f;
+  font-size: 13px;
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.right {
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.right
+  a {
+  display: flex;
+  align-items: center;
+}
+section#categoryMen
+  section.categoryMen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.right
+  a
+  img {
+  display: block;
+  width: 100%;
+}
+
+/* PRODUCT PAGE SECTION */
+section#productPage {
+}
+section#productPage section.productPage {
+  align-items: flex-start;
+  display: flex;
+  width: 100%;
+  height: 800px;
+  padding-right: 5%;
+}
+section#productPage section.productPage div.left {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+  height: 100%;
+}
+section#productPage section.productPage div.left ul {
+}
+section#productPage section.productPage div.left ul li {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  padding: 4px;
+}
+section#productPage section.productPage div.left ul li img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  height: 100%;
+}
+section#productPage section.productPage div.left img.up {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 8px;
+  rotate: -180deg;
+  background-color: #3c4242;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+section#productPage section.productPage div.left img.down {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #3c4242;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+.selected {
+  border: 1px solid black;
+}
+section#productPage section.productPage div.detailedImage {
+  height: 100%;
+  width: 40%;
+  margin-right: 60px;
+  position: relative;
+}
+section#productPage section.productPage div.detailedImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section#productPage section.productPage div.right {
+  padding-top: 40px;
+}
+section#productPage section.productPage div.right div.path {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #807d7e;
+  font-weight: 550;
+}
+section#productPage section.productPage div.right div.path small {
+  text-transform: capitalize;
+}
+section#productPage section.productPage div.right div.path div.arrow {
+}
+section#productPage section.productPage div.right div.path div.arrow img {
+  display: block;
+  width: 100%;
+}
+section#productPage section.productPage div.right h2 {
+  font-size: 34px;
+  color: #3c4242;
+  margin-bottom: 40px;
+  font-weight: bold;
+  width: 50%;
+  letter-spacing: 0.05em;
+}
+section#productPage section.productPage div.right div.ratings {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+section#productPage section.productPage div.right div.ratings div.rating {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+section#productPage section.productPage div.right div.ratings div.rating img {
+  display: block;
+  width: 100%;
+  margin-right: 2px;
+}
+section#productPage section.productPage div.right div.ratings div.rating small {
+  font-size: 18px;
+  padding-top: 2px;
+  color: #807d7e;
+  margin-left: 4px;
+}
+section#productPage section.productPage div.right div.ratings div.review {
+  display: flex;
+  align-items: center;
+}
+section#productPage section.productPage div.right div.ratings div.review img {
+  display: block;
+  margin-right: 14px;
+}
+section#productPage section.productPage div.right div.ratings div.review small {
+  font-size: 18px;
+  padding-top: 2px;
+  color: #807d7e;
+}
+section#productPage section.productPage div.right div.size {
+}
+section#productPage section.productPage div.right div.size div.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+section#productPage section.productPage div.right div.size div.top small {
+  font-size: 18px;
+  color: #3f4646;
+  font-weight: bold;
+}
+section#productPage section.productPage div.right div.size div.top small.guide {
+  font-size: 18px;
+  color: #807d7e;
+  font-weight: bold;
+  margin: 0 10px 0 25px;
+}
+section#productPage section.productPage div.right div.size div.top img {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+section#productPage section.productPage div.right div.size div.bottom {
+}
+section#productPage section.productPage div.right div.size div.bottom ul.sizes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+section#productPage
+  section.productPage
+  div.right
+  div.size
+  div.bottom
+  ul.sizes
+  li {
+  border: 2px solid #bebcbd;
+  color: #3c4242;
+  border-radius: 12px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+section#productPage
+  section.productPage
+  div.right
+  div.size
+  div.bottom
+  ul.sizes
+  li.active {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+section#productPage section.productPage div.right div.colors {
+  margin-bottom: 40px;
+}
+section#productPage section.productPage div.right div.colors h6 {
+  font-size: 18px;
+  color: #3f4646;
+  margin-bottom: 25px;
+}
+section#productPage section.productPage div.right div.colors ul.color {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+section#productPage section.productPage div.right div.colors ul.color li {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.color li.active {
+  outline: 2px solid black;
+  outline-offset: 3px;
+}
+section#productPage section.productPage div.right div.buy {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bebcbd;
+  padding-bottom: 40px;
+}
+section#productPage section.productPage div.right div.buy a.cart {
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #8a33fd;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+section#productPage section.productPage div.right div.buy button.cart {
+  font-size: 18px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #8a33fd;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+section#productPage section.productPage div.right div.buy button.cart img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+section#productPage section.productPage div.right div.buy a.cart img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+section#productPage section.productPage div.right div.buy div.price {
+  font-size: 18px;
+  color: #3c4242;
+  display: flex;
+  align-items: center;
+  padding: 11px 40px;
+  border: 1px solid #3c4242;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-left: 25px;
+  cursor: pointer;
+}
+section#productPage section.productPage div.right div.features {
+  padding-top: 40px;
+}
+section#productPage section.productPage div.right div.features ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section#productPage section.productPage div.right div.features ul li {
+  font-size: 18px;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+section#productPage section.productPage div.right div.features ul li div.img {
+  background-color: #f6f6f6;
+  border-radius: 50%;
+  padding: 13px;
+  margin-right: 15px;
+}
+section#productPage section.productPage div.right div.features ul li img {
+  display: block;
+}
+
+/* WOMENS CATEGORY SECTION */
+section#categoryWomen {
+  padding-bottom: 50px;
+}
+section#categoryWomen section.categoryWomen {
+}
+section#categoryWomen section.categoryWomen div.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+section#categoryWomen section.categoryWomen div.top div.violet {
+  width: 6px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #8a33fd;
+  margin-right: 12px;
+}
+section#categoryWomen section.categoryWomen div.top h3 {
+  font-size: 34px;
+  font-weight: 550;
+  color: #3c4242;
+}
+section#categoryWomen section.categoryWomen div.bottom {
+}
+section#categoryWomen section.categoryWomen div.bottom ul.products {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section#categoryWomen section.categoryWomen div.bottom ul.products li {
+  width: 21%;
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productImage {
+  height: 420px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productImage
+  img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.left {
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.left
+  h4 {
+  color: #2a2f2f;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.left
+  a {
+  color: #7f7f7f;
+  font-size: 13px;
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.right {
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.right
+  a {
+  display: flex;
+  align-items: center;
+}
+section#categoryWomen
+  section.categoryWomen
+  div.bottom
+  ul.products
+  li
+  div.productDetails
+  div.right
+  a
+  img {
+  display: block;
+}
+section#productPage section.wrapper section.productDescription {
+  margin-top: 70px;
+  display: flex;
+}
+
+section#productPage section.wrapper section.productDescription div.left {
+  width: 50%;
+}
+section#productPage
+  section.wrapper
+  section.productDescription
+  div.left
+  div.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+section#productPage
+  section.wrapper
+  section.productDescription
+  div.left
+  div.top
+  div.violet {
+  width: 6px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #8a33fd;
+  margin-right: 12px;
+}
+section#productPage
+  section.wrapper
+  section.productDescription
+  div.left
+  div.top
+  h3 {
+  font-size: 34px;
+  font-weight: 550;
+  color: #3c4242;
+}
+section#productPage section.wrapper section.productDescription div.left ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+section#productPage section.wrapper section.productDescription div.left ul li {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  color: #807d7e;
+  padding-bottom: 10px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+section#productPage
+  section.wrapper
+  section.productDescription
+  div.left
+  ul
+  li.active {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+  color: black;
+}
+section#productPage
+  section.wrapper
+  section.productDescription
+  div.left
+  ul
+  li
+  div.count {
+  width: 20px;
+  height: 20px;
+  background-color: #8a33fd;
+  color: white;
+  border-radius: 5px;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+section#productPage section.wrapper section.productDescription div.left p {
+  color: #807d7e;
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 25px;
+  width: 100%;
+}
+section#productPage section.wrapper section.productDescription ul.right {
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f6f6f6;
+  width: 55%;
+  height: max-content;
+}
+section#productPage section.wrapper section.productDescription ul.right li {
+  display: flex;
+  box-sizing: border-box;
+  padding: 20px;
+  width: calc(100% / 3);
+  border-right: 1px solid #bebcbd;
+  border-bottom: 1px solid #bebcbd;
+}
+section#productPage
+  section.wrapper
+  section.productDescription
+  ul.right
+  li:nth-child(3n) {
+  border-right: none;
+}
+section#productPage
+  section.wrapper
+  section.productDescription
+  ul.right
+  li:nth-last-child(-n + 3) {
+  border-bottom: none;
+}
+section#productPage section.wrapper section.productDescription ul.right li h5 {
+  font-size: 16px;
+  color: #807d7e;
+  font-weight: 400;
+  margin-bottom: 8px;
+  align-items: center;
+}
+section#productPage section.wrapper section.productDescription ul.right li h6 {
+  font-size: 16px;
+  color: #3c4242;
+  font-weight: 500;
+  display: block;
+}
+
+section#productPage section.wrapper section.similar {
+  margin-top: 80px;
+  padding-bottom: 40px;
+}
+
+section#productPage section.wrapper section.similar div.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+section#productPage section.wrapper section.similar div.top div.violet {
+  width: 6px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #8a33fd;
+  margin-right: 12px;
+}
+
+section#productPage section.wrapper section.similar div.top h3 {
+  font-size: 34px;
+  font-weight: 550;
+  color: #3c4242;
+}
+
+section#productPage section.wrapper section.similar ul.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+section#productPage section.wrapper section.similar ul.bottom li {
+  width: 21%;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+section#productPage
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.similarImageContainer {
+  height: 420px;
+  margin-bottom: 20px;
+}
+
+section#productPage
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.similarImageContainer
+  img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+div.wishImageContainer {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+}
+div.wishImageContainer button,
+div.wishImageContainer a {
+  /* width: 18px;
+  height: 18px; */
+  display: block;
+  transform: translateY(-1px) translateX(-0.5px);
+  border: none;
+  background: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+div.wishImageContainer img {
+  width: 50%;
+  display: block;
+  height: 100%;
+}
+section#productPage
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.wishImageContainer
+  img.wishlist {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+section#productPage
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+section#productPage
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails
+  div.left {
+}
+section#productPage
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails
+  div.left
+  h4 {
+  color: #3c4242;
+  font-weight: 600;
+  size: 16px;
+  margin-bottom: 5px;
+}
+section#productPage
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails
+  div.left
+  h5 {
+  color: #807d7e;
+  font-size: 14px;
+  font-weight: normal;
+}
+section#productPage
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails
+  div.right {
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  padding: 15px 25px;
+  font-weight: bold;
+  color: #3c4242;
+}
+
+/* FOOTER SECTION */
+footer {
+  background-color: #3c4242;
+  color: #f6f6f6;
+  padding: 90px 200px;
+}
+footer div.top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer div.top ul {
+  width: 22%;
+}
+footer div.top ul h3 {
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+footer div.top ul li {
+  margin-bottom: 25px;
+}
+footer div.top ul li:last-child {
+  margin-bottom: 15px;
+}
+footer div.top ul li a {
+  color: #f6f6f6;
+  font-size: 18px;
+}
+footer div.middle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+footer div.middle ul.left {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 20%;
+}
+footer div.middle ul.left li {
+  width: 40px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 12px;
+}
+footer div.middle ul.left li:hover {
+  background-color: #1877f2;
+}
+footer div.middle ul.left li a {
+  color: #f6f6f6;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer div.middle ul.left li a img {
+  width: 100%;
+  display: block;
+}
+footer div.middle div.right {
+  width: 37%;
+}
+footer div.middle div.right h3 {
+  font-size: 28px;
+  margin-bottom: 35px;
+}
+footer div.middle div.right ul.apps {
+  display: flex;
+  justify-content: space-between;
+}
+footer div.middle div.right ul.apps li {
+  width: max-content;
+  padding: 8px;
+  background-color: #404040;
+}
+footer div.middle div.right ul.apps li a {
+  color: #f6f6f6;
+  font-size: 18px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+footer div.middle div.right ul.apps li a img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+footer div.middle div.right ul.apps li a div.right {
+  width: 100%;
+}
+footer div.middle div.right ul.apps li a div.right small {
+  font-size: 10px;
+  color: white;
+}
+footer div.middle div.right ul.apps li a div.right h5 {
+  text-align: left;
+  margin-top: 0;
+  font-size: 18px;
+}
+footer div.popular {
+  position: relative;
+  padding: 30px 0;
+  border-top: 1px solid #fefefe;
+  border-bottom: 1px solid #fefefe;
+}
+footer div.popular h3 {
+  font-size: 28px;
+}
+footer div.popular img {
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  display: block;
+}
+footer div.popular img.rotate {
+  transform: rotate(180deg);
+}
+footer h5 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+footer ul.toggleDown {
+  align-items: center;
+  justify-content: space-between;
+  max-height: 0;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease, margin-top 0.3s ease;
+  gap: 10px;
+  display: flex;
+}
+footer ul.toggleDown.show {
+  max-height: 40px;
+  margin-top: 30px;
+}
+footer ul.toggleDown li {
+}
+footer ul.toggleDown li a {
+  color: white;
+}
+
+/* BRANDS SECTION */
+section#brandDeals {
+  padding-bottom: 70px;
+}
+section#brandDeals section.wrapper section.brandDeals {
+  background-color: #323232;
+  border-radius: 12px;
+  padding: 45px 0;
+}
+section#brandDeals section.wrapper section.brandDeals h2 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+section#brandDeals section.wrapper section.brandDeals h6 {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: normal;
+  margin: 30px 0 50px 0;
+}
+section#brandDeals section.wrapper section.brandDeals h6 b {
+  font-size: 22px;
+  color: #fbd103;
+}
+section#brandDeals section.wrapper section.brandDeals ul.brands {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+section#brandDeals section.wrapper section.brandDeals ul.brands li {
+  width: 18%;
+  height: 90px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+section#brandDeals section.wrapper section.brandDeals ul.brands li img {
+  display: block;
+  width: 70%;
+  height: 70%;
+}
+
+/* SIMILAR PRODUCTS SECTION */
+section#similar section.wrapper section.similar {
+  padding-bottom: 40px;
+}
+section#similar section.wrapper section.similar div.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+section#similar section.wrapper section.similar div.top div.violet {
+  width: 6px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #8a33fd;
+  margin-right: 12px;
+}
+section#similar section.wrapper section.similar div.top h3 {
+  font-size: 34px;
+  font-weight: 550;
+  color: #3c4242;
+}
+section#similar section.wrapper section.similar ul.bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 4%;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
+}
+section#similar section.wrapper section.similar ul.bottom li {
+  width: 22%;
+  position: relative;
+  margin-bottom: 40px;
+}
+section#similar
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.similarImageContainer {
+  height: 420px;
+  margin-bottom: 20px;
+}
+section#similar
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.similarImageContainer
+  img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section#similar
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.wishImageContainer
+  img.wishlist {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+section#similar
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+section#similar
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails
+  div.left {
+}
+section#similar
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails
+  div.left
+  h4 {
+  color: #3c4242;
+  font-weight: 600;
+  size: 16px;
+  margin-bottom: 5px;
+}
+section#similar
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails
+  div.left
+  h5 {
+  color: #807d7e;
+  font-size: 14px;
+  font-weight: normal;
+}
+section#similar
+  section.wrapper
+  section.similar
+  ul.bottom
+  li
+  div.productDetails
+  div.right {
+  border-radius: 8px;
+  background-color: #f6f6f6;
+  padding: 15px 40px;
+  font-weight: bold;
+  color: #3c4242;
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FEEDBACKS SECTION */
+section#feedback-section {
+  padding-bottom: 120px;
+}
+section#feedback-section section.wrapper section.feedback-section div.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+section#feedback-section section.wrapper section.feedback-section {
+  overflow: hidden;
+  position: relative;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  div.top
+  div.violet {
+  width: 6px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #8a33fd;
+  margin-right: 12px;
+}
+section#feedback-section section.wrapper section.feedback-section div.top h3 {
+  font-size: 34px;
+  font-weight: 550;
+  color: #3c4242;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  div.carousel-container {
+  width: 100%;
+  position: relative;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  div.carousel-container
+  div.carousel {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  div.carousel-container
+  div.carousel
+  div.carousel-item {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  div.carousel-container
+  div.carousel
+  div.carousel-item
+  li {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1.8px solid #bebcbd;
+  padding: 20px;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+}
+section#feedback-section section.wrapper section.feedback-section li div.top {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  display: flex;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  li
+  div.top
+  div.left {
+  flex-shrink: 0;
+  display: flex;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  li
+  div.top
+  div.left
+  img {
+  display: block;
+  width: 100%;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  li
+  div.top
+  div.right {
+  display: flex;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  li
+  div.top
+  div.right
+  img {
+  display: block;
+  margin-right: 5px;
+}
+section#feedback-section section.wrapper section.feedback-section li h4 {
+  font-size: 22px;
+  color: #3c4242;
+  margin-bottom: 20px;
+}
+section#feedback-section section.wrapper section.feedback-section li p {
+  font-size: 14px;
+  color: #807d7e;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  div.dots-cont {
+  display: flex;
+  gap: 5px;
+  margin: 0 auto;
+  width: max-content;
+  margin-top: 30px;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  div.dots-cont
+  span.dotfd {
+  width: 10px;
+  height: 10px;
+  background-color: #bebcbd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+section#feedback-section
+  section.wrapper
+  section.feedback-section
+  div.dots-cont
+  span.dotfd.activesfd {
+  background-color: black;
+}
+.slick-slider .slick-track {
+  display: flex;
+  gap: 16px;
+}
+.slick-slider #card {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1.8px solid #bebcbd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.slick-slider #card .top {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  display: flex;
+}
+.slick-slider #card .top .left {
+  display: flex;
+  flex-shrink: 0;
+}
+.slick-slider #card .top .left img {
+  display: block;
+  width: 100%;
+}
+.slick-slider #card .top .right {
+  display: flex;
+}
+.slick-slider #card h4 {
+  font-size: 22px;
+  color: #3c4242;
+  margin-bottom: 20px;
+}
+.slick-slider #card p {
+  font-size: 14px;
+  color: #807d7e;
+}
+.slick-dots {
+  position: relative !important;
+  bottom: -20px !important;
+}
+.slick-dots li {
+  height: 40px !important;
+  margin: 0 !important;
+}
+.slick-dots li button:before {
+  font-size: 12px !important;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: white;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 5px 0;
+}
+
+.search-dropdown li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.search-dropdown li:hover {
+  background-color: #f9f9f9;
+}
+
+.search-dropdown img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.search-dropdown .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-dropdown .name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.search-dropdown .price {
+  font-size: 13px;
+  color: #888;
+}
+
+@media all and (max-width: 1280px) {
+  section#explore section.wrapper section.exploreItems div.left {
+    width: 48%;
+    background-size: cover;
+  }
+  section#explore section.wrapper section.exploreItems div.right {
+    width: 48%;
+    background-size: cover;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 350px;
+  }
+  section#arrival
+    section.newArrival
+    section.slider-section2
+    div.products-container
+    div.products
+    div.product
+    div.productImage {
+    height: 350px;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 350px;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 350px;
+  }
+  section#brandDeals section.wrapper section.brandDeals ul.brands li {
+    width: 160px;
+  }
+  header ul.middle li {
+    padding: 10px 6px;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    border: none;
+  }
+  header ul.right li.input {
+    margin-right: 35px;
+  }
+  footer div.top ul {
+    width: 28%;
+  }
+  footer div.middle ul.left {
+    width: 22%;
+  }
+  footer div.middle div.right h3 {
+    font-size: 22px;
+  }
+  footer div.middle div.right {
+    width: 31%;
+  }
+  footer div.middle div.right ul.apps li a div.right h5 {
+    font-size: 13px;
+  }
+  footer div.middle div.right ul.apps li a img {
+    width: 30px;
+    height: 30px;
+  }
+  section#productPage section.productPage {
+    height: 600px;
+  }
+  section#productPage section.productPage div.right h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  section#productPage section.productPage div.right div.path {
+    margin-bottom: 20px;
+  }
+  section#productPage section.productPage div.right div.ratings {
+    margin-bottom: 20px;
+  }
+  section#productPage
+    section.productPage
+    div.right
+    div.size
+    div.bottom
+    ul.sizes {
+    margin-bottom: 20px;
+  }
+  section#productPage section.productPage div.right div.colors {
+    margin-bottom: 20px;
+  }
+  section#productPage section.productPage div.right div.features {
+    padding-top: 20px;
+  }
+  section#productPage section.productPage div.right div.features ul li {
+    margin-bottom: 15px;
+  }
+  section#productPage section.wrapper section.productDescription div.left ul {
+    width: 90%;
+  }
+  section#productPage section.wrapper section.productDescription div.left p {
+    width: 91%;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 350px;
+  }
+  section#productPage section.wrapper section.similar ul.bottom {
+    align-items: flex-start;
+  }
+  section#arrival
+    section.newArrival
+    div.slider-container
+    div.slider
+    div.product-wrapper
+    div.product
+    img {
+    height: 350px;
+  }
+  footer div.middle div.right {
+    width: 40%;
+  }
+  section#banner section.banner div.left div.content h2 {
+    width: 80%;
+  }
+  section#banner section.banner div.left div.content p {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 1210px) {
+  header ul.middle {
+    gap: 10px;
+  }
+  header ul.right li.input {
+    margin-right: 0;
+  }
+  section#productPage section.productPage div.detailedImage {
+    width: 40%;
+    margin-right: 60px;
+  }
+  footer div.middle ul.left {
+    width: 32%;
+  }
+  section#brandDeals section.wrapper section.brandDeals ul.brands {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 1080px) {
+  header div.menubar {
+    display: flex;
+  }
+  header ul.middle {
+    display: block;
+    position: absolute;
+    right: 0px;
+    background-color: white;
+    top: 96px;
+    z-index: 10;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.3s ease;
+  }
+  header ul.middle.show {
+    width: 100vw;
+    height: 100vh;
+  }
+  header ul.middle li {
+    background-color: #f6f6f6;
+    margin-bottom: 5px !important;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+  }
+  header ul.middle li:hover {
+    transform: scale(1.05);
+    background-color: #f7f7f0;
+  }
+  header ul.middle li a {
+    width: 100%;
+    text-align: center;
+  }
+  section#productPage
+    section.wrapper
+    section.productDescription
+    div.left
+    ul
+    li {
+    margin-right: 15px;
+    text-align: center;
+  }
+  footer {
+    padding: 90px 70px;
+  }
+  section#banner section.banner div.left div.content p {
+    width: 85%;
+  }
+  section#explore section.wrapper section.exploreItems div.left,
+  section#explore section.wrapper section.exploreItems div.right {
+    width: 46%;
+  }
+  section#brandDeals section.wrapper section.brandDeals ul.brands li {
+    width: 145px;
+  }
+  section#productPage section.productPage div.detailedImage {
+    width: 60%;
+    margin-right: 30px;
+  }
+  section#arrival
+    section.newArrival
+    div.slider-container
+    div.slider
+    div.slider-track
+    div.slide {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media all and (max-width: 980px) {
+  header h1 {
+    width: 70px;
+  }
+  header ul.middle li a {
+    font-size: 14px;
+  }
+  header ul.right li.input {
+    margin-right: 10px;
+    padding: 10px;
+    gap: 15px;
+  }
+  header ul.right li a,
+  header ul.right li button {
+    padding: 10px;
+  }
+  header ul.middle {
+    gap: 25px;
+  }
+  section#productPage section.productPage {
+    height: 400px;
+  }
+  section#productPage section.productPage div.left ul li {
+    width: 55px;
+    height: 55px;
+  }
+  section#productPage section.productPage div.left img.up,
+  section#productPage section.productPage div.left img.down {
+    padding: 6px;
+  }
+  section#productPage section.productPage div.right {
+    padding-top: 25px;
+  }
+  section#productPage section.productPage div.right div.size div.top {
+    margin-bottom: 15px;
+  }
+  section#productPage
+    section.productPage
+    div.right
+    div.size
+    div.bottom
+    ul.sizes
+    li {
+    margin-right: 8px;
+  }
+  section#productPage section.productPage div.right div.colors {
+    display: flex;
+    align-items: center;
+  }
+  section#productPage section.productPage div.right div.colors h6 {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+  section#productPage section.productPage div.right div.buy div.cart {
+    padding: 10px 22px;
+  }
+  section#productPage section.productPage div.right div.buy div.price {
+    padding: 9px 20px;
+  }
+  section#productPage section.productPage div.right h2 {
+    font-size: 22px;
+    width: 90%;
+    margin-bottom: 12px;
+  }
+  section#productPage section.productPage div.right div.features ul li {
+    flex-shrink: 0;
+  }
+  section#productPage section.productPage div.right div.buy {
+    padding-bottom: 10px;
+  }
+  section#productPage section.productPage div.right div.features ul li div.img {
+    margin-right: 10px;
+  }
+  section#productPage section.productPage div.right div.features ul li {
+    font-size: 14px;
+  }
+  section#productPage section.productPage div.right div.ratings {
+    margin-bottom: 12px;
+  }
+  section#productPage
+    section.productPage
+    div.right
+    div.size
+    div.top
+    small.guide {
+    display: none;
+  }
+  section#productPage section.productPage div.right div.size div.top img {
+    display: none;
+  }
+  section#productPage section.productPage div.right div.size {
+    display: flex;
+    align-items: center;
+  }
+  section#productPage section.productPage div.right div.size div.top small {
+    margin-right: 12px;
+  }
+  section#productPage
+    section.wrapper
+    section.productDescription
+    div.left
+    ul
+    li:last-child {
+    margin-right: 0;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 290px;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.wishImageContainer {
+    right: 20px;
+    top: 20px;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails
+    div.right {
+    padding: 12px;
+    font-size: 14px;
+  }
+  footer div.top ul h3 {
+    font-size: 22px;
+  }
+  footer div.top ul li a {
+    font-size: 16px;
+  }
+  footer div.middle ul.left {
+    width: 28%;
+  }
+  section#explore section.wrapper section.exploreItems div.right {
+    width: 40%;
+  }
+  section#explore section.wrapper section.exploreItems div.left {
+    width: 40%;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide1
+    .content
+    h1 {
+    font-size: 60px;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide1
+    .content
+    h4 {
+    font-size: 28px;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide1
+    .content
+    a.button {
+    font-size: 21px;
+    padding: 16px 60px;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    a.button {
+    font-size: 21px;
+    padding: 16px 60px;
+  }
+  section#arrival
+    section.newArrival
+    section.slider-section2
+    div.products-container
+    div.products
+    div.product
+    div.productImage {
+    height: 290px;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 290px;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 290px;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 290px;
+  }
+  section#brandDeals section.wrapper section.brandDeals ul.brands {
+    width: 85%;
+  }
+  section#banner section.banner div.left div.content p {
+    width: 95%;
+    margin: 20px 0 40px;
+  }
+  section#explore section.wrapper section.exploreItems div.left {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  section#explore section.wrapper section.exploreItems div.right {
+    width: 80%;
+    margin: 0 auto;
+  }
+  section#explore section.wrapper section.exploreItems {
+    flex-wrap: wrap;
+  }
+  section#arrival
+    section.newArrival
+    div.slider-container
+    div.slider
+    div.product-wrapper
+    div.product
+    img {
+    height: 270px;
+  }
+  section#banner section.banner div.left div.content h2 {
+    width: 100%;
+  }
+  section#banner section.banner div.left div.content {
+    padding-left: 50px;
+  }
+  section#brandDeals section.wrapper section.brandDeals ul.brands {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  section#brandDeals section.wrapper section.brandDeals ul.brands li {
+    width: 190px;
+    margin-bottom: 20px;
+  }
+  footer div.middle div.right {
+    width: 32%;
+  }
+  footer div.middle div.right ul.apps {
+    flex-wrap: wrap;
+    width: 70%;
+  }
+  footer div.middle div.right ul.apps li {
+    width: 100%;
+  }
+  footer div.middle div.right ul.apps li:first-child {
+    margin-bottom: 10px;
+  }
+  section#productPage section.wrapper section.productDescription div.left ul {
+    width: 94%;
+  }
+  section#arrival
+    section.newArrival
+    div.slider-container
+    div.slider
+    div.slider-track
+    div.slide {
+    flex: 0 0 50%;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails {
+    flex-wrap: wrap;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails
+    div.left {
+    width: 100%;
+    text-align: center;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails
+    div.right {
+    margin: 12px auto 0;
+    padding: 8px 40px;
+  }
+  section#similar section.wrapper section.similar ul.bottom {
+    gap: 5%;
+  }
+  section#similar section.wrapper section.similar ul.bottom li {
+    width: 30%;
+  }
+}
+@media all and (max-width: 840px) {
+  section#productPage section.productPage div.left {
+    display: none;
+  }
+  section#banner section.banner div.right {
+    display: none;
+  }
+  section#banner section.banner div.left div.content p {
+    width: 90%;
+  }
+  section#banner section.banner {
+    flex-wrap: wrap;
+  }
+  section#banner section.banner div.left {
+    width: 100%;
+    border-radius: 15px;
+  }
+  section#banner section.banner div.left div.content {
+    padding: 50px;
+  }
+  footer div.middle div.right h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  footer ul.toggleDown.show {
+    max-height: 280px;
+  }
+  footer ul.toggleDown {
+    flex-wrap: wrap;
+  }
+  footer ul.toggleDown li {
+    font-size: 18px;
+    width: 100%;
+    border-right: none;
+    text-align: center;
+    background-color: #404040;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  section#feedback-section section.wrapper section.feedback-section li div.top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  section#feedback-section
+    section.wrapper
+    section.feedback-section
+    li
+    div.top
+    div.right {
+    width: 100%;
+    margin-top: 15px;
+    justify-content: space-evenly;
+  }
+  section#feedback-section section.wrapper section.feedback-section li h4 {
+    font-size: 20px;
+    text-align: center;
+  }
+  footer div.middle ul.left {
+    width: 34%;
+  }
+  section#arrival section.newArrival div.top h3,
+  section#categoryMen section.categoryMen div.top h3,
+  section#categoryWomen section.categoryWomen div.top h3,
+  section#productPage section.wrapper section.similar div.top h3,
+  section#similar section.wrapper section.similar div.top h3,
+  section#feedback-section section.wrapper section.feedback-section div.top h3,
+  section#productPage
+    section.wrapper
+    section.productDescription
+    div.left
+    div.top
+    h3 {
+    font-size: 28px;
+  }
+  section#productPage section.wrapper section.productDescription {
+    flex-wrap: wrap;
+  }
+  section#productPage section.wrapper section.productDescription div.left {
+    width: 100%;
+  }
+  section#productPage section.wrapper section.productDescription ul.right {
+    width: 100%;
+    margin-top: 20px;
+  }
+  footer div.top ul li a {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  section.slider-section div.slider-container div.slider div.slide1 .content h1,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    h1 {
+    font-size: 50px;
+    margin: 30px 0;
+  }
+  section#similar section.wrapper section.similar ul.bottom {
+    gap: 4%;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 .content h5,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    h5 {
+    font-size: 26px;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 .content h4,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    h4 {
+    font-size: 26px;
+  }
+  section#banner section.banner div.left div.content h2 {
+    font-size: 26px;
+    width: 100%;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    a.button
+    section#banner
+    section.banner
+    div.left
+    div.content
+    p {
+    width: 100%;
+    font-size: 16px;
+  }
+  #card .top {
+    flex-wrap: wrap;
+    margin-bottom: 30px !important;
+  }
+  #card .top .left {
+    margin: 0 auto;
+  }
+  #card .top .right {
+    width: 100%;
+    margin-top: 14px;
+    justify-content: center;
+  }
+  #card h4 {
+    text-align: center;
+  }
+  section#banner section.banner div.left div.content a.button {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+  section#categoryMen section.categoryMen div.bottom ul.products {
+    align-items: flex-start;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productDetails
+    div.left
+    h4 {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 400px;
+    cursor: pointer;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productDetails
+    div.right {
+    display: none;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productDetails
+    div.left {
+    width: 100%;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productDetails
+    div.left
+    a {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 400px;
+    cursor: pointer;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productDetails
+    div.right {
+    display: none;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productDetails
+    div.left {
+    width: 100%;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productDetails
+    div.left
+    h4 {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productDetails
+    div.left
+    a {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 400px;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.wishImageContainer {
+    top: 15px;
+    right: 15px;
+    padding: 10px 8px 7px 8px;
+  }
+
+  footer div.top ul h3 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  footer {
+    padding: 90px 70px;
+  }
+  footer div.middle ul.left {
+    width: 35%;
+  }
+  footer div.middle div.right {
+    width: 38%;
+  }
+  footer div.middle div.right h3 {
+    margin-bottom: 20px;
+  }
+  footer ul.toggleDown li:last-child {
+    border-right: none;
+  }
+  section#productPage section.productPage div.detailedImage {
+    margin-right: 40px;
+    width: 80%;
+  }
+  section#productPage section.productPage div.right {
+    padding-top: 5px;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 300px;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails {
+    flex-wrap: wrap;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails
+    div.right {
+    margin: 12px auto 0;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails
+    div.left
+    h4,
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails
+    div.left
+    h5 {
+    text-align: center;
+    width: 100%;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.productDetails
+    div.left {
+    width: 100%;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.wishImageContainer {
+    padding: 10px 8px 7px 8px;
+    top: 15px;
+    right: 15px;
+  }
+  section#productPage section.wrapper section.productDescription ul.right {
+    margin-top: 15px;
+  }
+  section#brandDeals section.wrapper section.brandDeals ul.brands li {
+    width: 155px;
+  }
+  section#productPage
+    section.productPage
+    div.right
+    div.ratings
+    div.review
+    small {
+    font-size: 15px;
+  }
+  section#categoryMen section.categoryMen div.bottom ul.products li {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  section#categoryWomen section.categoryWomen div.bottom ul.products li {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  section#categoryMen section.categoryMen div.bottom ul.products {
+    margin-bottom: -15px;
+  }
+  section#categoryWomen section.categoryWomen div.bottom ul.products {
+    margin-bottom: -15px;
+  }
+  section#similar section.wrapper section.similar ul.bottom li {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  section#similar section.wrapper section.similar ul.bottom {
+    margin-bottom: -25px;
+  }
+  section#feedback-section
+    section.wrapper
+    section.feedback-section
+    div.carousel-container
+    div.carousel
+    div.carousel-item {
+    flex-direction: column;
+  }
+  section#feedback-section
+    section.wrapper
+    section.feedback-section
+    div.carousel-container
+    div.carousel
+    div.carousel-item
+    li {
+    width: 99%;
+    margin: 0 auto;
+  }
+  section#feedback-section
+    section.wrapper
+    section.feedback-section
+    li
+    div.top
+    div.right {
+    width: max-content;
+    justify-content: space-between;
+    margin: 10px auto 0;
+  }
+  section#feedback-section section.wrapper section.feedback-section li div.top {
+    display: block;
+  }
+  section#feedback-section
+    section.wrapper
+    section.feedback-section
+    li
+    div.top
+    div.left {
+    width: 16%;
+    margin: 0 auto;
+  }
+  section#feedback-section
+    section.wrapper
+    section.feedback-section
+    li
+    div.top
+    div.right
+    img:last-child {
+    margin-right: 0;
+  }
+  section#feedback-section section.wrapper section.feedback-section li p {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 640px) {
+  section.slider-section div.slider-container div.slider div.slide1 .content h1,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    h1 {
+    width: 60%;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide1
+    .content
+    a.button {
+    padding: 16px 26px;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    a.button {
+    padding: 16px 26px;
+  }
+  footer div.middle {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  footer div.middle ul.left {
+    gap: 10px;
+    width: 40%;
+  }
+  footer ul.toggleDown li {
+    font-size: 15px;
+  }
+  footer div.middle div.right {
+    width: 100%;
+    margin: 15px 0;
+  }
+  footer div.middle div.right ul.apps {
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  footer div.middle div.right ul.apps li {
+    width: 48%;
+    padding: 0;
+  }
+  footer div.middle div.right ul.apps li a div.right {
+    margin: 0;
+  }
+  footer div.middle div.right ul.apps li:first-child {
+    margin-bottom: 0;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 350px;
+  }
+  section#categoryWomen section.categoryWomen div.bottom ul.products li {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 350px;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 350px;
+  }
+  section#categoryWomen section.categoryWomen div.top {
+    margin-bottom: 30px;
+  }
+  section#categoryMen section.categoryMen div.top {
+    margin-bottom: 30px;
+  }
+  section#similar section.wrapper section.similar div.top {
+    margin-bottom: 30px;
+  }
+  section#productPage section.wrapper section.similar div.top {
+    margin-bottom: 30px;
+  }
+  section#productPage section.wrapper section.similar ul.bottom {
+    flex-wrap: wrap;
+  }
+  section#productPage section.wrapper section.similar ul.bottom li {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 350px;
+  }
+  section#productPage section.productPage {
+    flex-wrap: wrap;
+    height: max-content;
+  }
+  section#productPage section.productPage div.detailedImage {
+    margin-right: 0;
+    width: 60%;
+    margin: 0 auto 30px;
+  }
+  footer h5 {
+    font-size: 16px;
+  }
+  footer div.top {
+    flex-wrap: wrap;
+  }
+  footer div.top ul {
+    width: 46%;
+    text-align: center;
+    border: 1px solid white;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 30px;
+  }
+  footer div.top ul li:last-child {
+    margin-bottom: 0;
+  }
+  footer div.top ul h3 {
+    font-size: 22px;
+  }
+  footer div.top ul li a {
+    font-size: 18px;
+  }
+  section#productPage section.productPage div.right h2 {
+    margin-bottom: 20px;
+  }
+  section#productPage section.wrapper section.productDescription {
+    margin-top: 40px;
+  }
+  section#productPage section.wrapper {
+    margin: 0;
+    width: 100%;
+  }
+  section#productPage section.productPage div.right div.ratings {
+    margin-bottom: 20px;
+  }
+  footer div.middle {
+    margin-bottom: 60px;
+  }
+  section#brandDeals section.wrapper section.brandDeals ul.brands li {
+    width: 165px;
+  }
+  footer div.popular h3 {
+    font-size: 22px;
+  }
+  footer div.middle div.right ul.apps li {
+    padding: 10px;
+  }
+  header ul.right li.input input {
+    position: absolute;
+    width: 100%;
+    top: 95px;
+    z-index: 10;
+    padding: 10px 100px 10px 10px;
+    visibility: hidden;
+    left: 0;
+  }
+  header ul.right li.input input.showinput {
+    visibility: visible;
+  }
+  header ul.right li.input {
+    margin-right: 0;
+  }
+  section#feedback-section section.wrapper section.feedback-section div.top {
+    margin-bottom: 30px;
+  }
+}
+@media all and (max-width: 540px) {
+  footer div.middle ul.left {
+    width: 50%;
+  }
+  footer div.middle div.right ul.apps {
+    width: 100%;
+  }
+  footer div.middle div.right ul.apps li {
+    width: 35%;
+  }
+  footer h5 {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 {
+    background: #00bbde;
+  }
+  section.slider-section div.slider-container div.slider div.slide2 {
+    background: #febb46;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 .content,
+  section.slider-section div.slider-container div.slider div.slide2 .content {
+    padding: 100px;
+    text-align: center;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 .content h1,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    h1 {
+    width: 100%;
+  }
+  section.slider-section div.slider-container img.prev {
+    display: none;
+  }
+  section.slider-section div.slider-container img.next {
+    display: none;
+  }
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 300px;
+  }
+  section#arrival
+    section.newArrival
+    section.slider-section2
+    div.products-container
+    div.products
+    div.product
+    div.productImage {
+    height: 260px;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 300px;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 300px;
+  }
+  footer div.top ul h3 {
+    font-size: 18px;
+  }
+  footer div.top ul li a {
+    font-size: 16px;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 300px;
+  }
+  section#productPage section.productPage div.detailedImage {
+    width: 75%;
+  }
+  footer div.middle div.right ul.apps li {
+    width: 45%;
+  }
+  section#arrival
+    section.newArrival
+    div.slider-container
+    div.slider
+    div.slider-track
+    div.slide {
+    flex: 0 0 100%;
+  }
+}
+@media all and (max-width: 480px) {
+  section#categoryMen
+    section.categoryMen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 250px;
+  }
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li
+    div.productImage {
+    height: 250px;
+  }
+  section#similar
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 250px;
+  }
+  section#productPage
+    section.wrapper
+    section.similar
+    ul.bottom
+    li
+    div.similarImageContainer {
+    height: 250px;
+  }
+  footer {
+    padding: 90px 30px;
+  }
+  section#productPage
+    section.wrapper
+    section.productDescription
+    div.left
+    ul
+    li
+    div.count {
+    width: 30px;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 .content h1,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    h1 {
+    font-size: 40px;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 .content h5,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    h5 {
+    font-size: 20px;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 .content h4,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    h4 {
+    font-size: 20px;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide1
+    .content
+    a.button,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    a.button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  section#brandDeals section.wrapper section.brandDeals h2 {
+    font-size: 36px;
+  }
+  footer div.top ul li a {
+    font-size: 14px;
+    width: 100%;
+  }
+  footer div.top ul li {
+    margin-bottom: 12px;
+  }
+  footer div.top ul {
+    width: 48.5%;
+  }
+  footer div.middle ul.left {
+    width: 60%;
+  }
+  footer div.middle div.right ul.apps li {
+    width: 49%;
+  }
+  section#productPage section.productPage div.right div.ratings div.rating {
+    width: 40%;
+    margin-right: 0;
+    width: 60%;
+    margin-bottom: 15px;
+  }
+  section#productPage
+    section.productPage
+    div.right
+    div.ratings
+    div.rating
+    small {
+    font-size: 15px;
+  }
+  section#productPage
+    section.productPage
+    div.right
+    div.ratings
+    div.review
+    small {
+    font-size: 15px;
+  }
+  section#productPage section.productPage div.right div.ratings div.review {
+    width: 60%;
+  }
+  section#productPage section.productPage div.right div.ratings {
+    width: 85%;
+    justify-content: space-between;
+  }
+  section#productPage section.productPage div.right div.ratings div.rating img {
+    width: 22px;
+    height: 22px;
+  }
+  section#productPage section.productPage div.right div.ratings div.review img {
+    margin-right: 0;
+    width: 10%;
+    margin-right: 5px;
+  }
+  section#productPage section.productPage div.right div.size {
+    flex-wrap: wrap;
+  }
+  section#productPage section.productPage div.right div.size div.bottom {
+    width: 80%;
+  }
+  section#productPage section.productPage div.right div.size div.top {
+    width: 100%;
+  }
+  section#productPage section.productPage div.right div.colors {
+    flex-wrap: wrap;
+  }
+  section#productPage section.productPage div.right div.colors h6 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  section#productPage section.productPage div.right div.ratings {
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  section#productPage section.productPage div.right div.buy div.cart {
+    font-size: 14px;
+  }
+  section#productPage section.productPage div.right div.buy div.price {
+    font-size: 14px;
+  }
+  section#productPage
+    section.wrapper
+    section.productDescription
+    div.left
+    ul
+    li {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  section#explore section.wrapper section.exploreItems div.right {
+    background: #9878b6;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  section#explore section.wrapper section.exploreItems h2 {
+    width: 85%;
+    margin: 30px auto;
+    font-size: 28px;
+  }
+  section#explore section.wrapper section.exploreItems div.left {
+    background: #febb46;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  header ul.right {
+    gap: 10px;
+  }
+  section#categoryMen section.categoryMen div.bottom ul.products li,
+  section#categoryWomen section.categoryWomen div.bottom ul.products li,
+  section#similar section.wrapper section.similar ul.bottom li,
+  section#productPage section.wrapper section.similar ul.bottom li {
+    width: 80%;
+    margin: 0 auto 15px;
+  }
+}
+@media all and (max-width: 400px) {
+  header h1 {
+    width: 50px;
+  }
+  header ul.right {
+    gap: 4px;
+  }
+}
+@media all and (max-width: 360px) {
+  section#productPage section.wrapper section.productDescription div.left ul {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  section#productPage
+    section.wrapper
+    section.productDescription
+    div.left
+    ul
+    li {
+    width: max-content;
+  }
+  section#productPage section.productPage div.right div.size div.bottom {
+    width: 100%;
+  }
+  section#productPage section.productPage div.right div.buy div.cart {
+    padding: 10px 20px;
+  }
+  footer div.top ul {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  section#feedback-section
+    section.wrapper
+    section.feedback-section
+    li
+    div.top
+    div.left {
+    width: 20%;
+  }
+  footer div.top ul:last-child {
+    margin-bottom: 0;
+  }
+  section#arrival section.newArrival div.top h3,
+  section#categoryMen section.categoryMen div.top h3,
+  section#categoryWomen section.categoryWomen div.top h3,
+  section#productPage section.wrapper section.similar div.top h3,
+  section#similar section.wrapper section.similar div.top h3,
+  section#feedback-section section.wrapper section.feedback-section div.top h3,
+  section#productPage
+    section.wrapper
+    section.productDescription
+    div.left
+    div.top
+    h3 {
+    font-size: 22px;
+  }
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide1
+    .content
+    a.button,
+  section.slider-section
+    div.slider-container
+    div.slider
+    div.slide2
+    .content
+    a.button {
+    font-size: 14px;
+  }
+  section.slider-section div.slider-container div.slider div.slide1 .content,
+  section.slider-section div.slider-container div.slider div.slide2 .content {
+    padding: 100px 0;
+  }
+
+  section#categoryMen section.categoryMen div.bottom ul.products li:last-child,
+  section#categoryWomen
+    section.categoryWomen
+    div.bottom
+    ul.products
+    li:last-child,
+  section#similar section.wrapper section.similar ul.bottom li:last-child,
+  section#productPage section.wrapper section.similar ul.bottom li:last-child {
+    margin-bottom: 0;
+  }
+  section#productPage
+    section.wrapper
+    section.productDescription
+    div.left
+    ul
+    li:last-child {
+    margin-top: 10px;
+  }
+  section#productPage section.productPage div.right div.features ul li {
+    width: 50%;
+    font-size: 12px;
+  }
+}
