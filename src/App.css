@@ -2907,6 +2907,9 @@ section#feedback-section
     h1 {
     width: 60%;
   }
+  section#similar section.wrapper section.similar {
+    padding:5%;
+  }
   section.slider-section
     div.slider-container
     div.slider
@@ -3011,6 +3014,7 @@ section#feedback-section
   section#productPage section.productPage {
     flex-wrap: wrap;
     height: max-content;
+    padding:5%;
   }
   section#productPage section.productPage div.detailedImage {
     margin-right: 0;
@@ -3046,6 +3050,7 @@ section#feedback-section
   }
   section#productPage section.wrapper section.productDescription {
     margin-top: 40px;
+    padding:5%;
   }
   section#productPage section.wrapper {
     margin: 0;
