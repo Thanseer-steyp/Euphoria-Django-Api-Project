@@ -2433,6 +2433,9 @@ section#feedback-section
   section#similar section.wrapper section.similar ul.bottom li {
     width: 30%;
   }
+  .listDrop {
+    width: 258px !important;
+  }
 }
 @media all and (max-width: 840px) {
   section#productPage section.productPage div.left {
@@ -3066,7 +3069,7 @@ section#feedback-section
   header ul.right li.input input {
     position: absolute;
     width: 100%;
-    top: 95px;
+    top: 66px;
     z-index: 10;
     padding: 10px 100px 10px 10px;
     visibility: hidden;
@@ -3080,6 +3083,10 @@ section#feedback-section
   }
   section#feedback-section section.wrapper section.feedback-section div.top {
     margin-bottom: 30px;
+  }
+  .listDrop {
+    width: 204px !important;
+    top: 280% !important;
   }
 }
 @media all and (max-width: 540px) {
@@ -3390,6 +3397,9 @@ section#feedback-section
     width: 80%;
     margin: 0 auto 15px;
   }
+  .listDrop {
+    width: 175px !important;
+  }
 }
 @media all and (max-width: 400px) {
   header h1 {
@@ -3397,6 +3407,9 @@ section#feedback-section
   }
   header ul.right {
     gap: 4px;
+  }
+  .listDrop {
+    width: 157px !important;
   }
 }
 @media all and (max-width: 360px) {

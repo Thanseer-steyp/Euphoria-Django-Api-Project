@@ -149,7 +149,7 @@ const Header = () => {
         </ul>
 
         <ul className="right" style={{ position: "relative" }}>
-          <li className="input" style={{ position: "relative" }}>
+          <li className="input" >
             <img
               src={searchIcon}
               alt="Search"
@@ -163,26 +163,28 @@ const Header = () => {
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search"
               className={showSearch ? "showinput" : ""}
-              style={{ position: "relative", zIndex: 1000 }}
+              style={{ zIndex: 1000 }}
             />
 
             {searchQuery && (
               <ul
-                style={{
-                  position: "absolute",
-                  top: "100%",
-                  left: 0,
-                  right: 0,
-                  backgroundColor: "#fff",
-                  border: "1px solid #ddd",
-                  zIndex: 999,
-                  listStyle: "none",
-                  padding: 0,
-                  marginTop: "4px",
-                  maxHeight: "300px",
-                  overflowY: "auto",
-                }}
-              >
+              className="listDrop"
+              style={{
+                position: "absolute",
+                top: "100%",
+                left: 0,
+                right: 0,
+                backgroundColor: "#fff",
+                border: "1px solid #ddd",
+                zIndex: 999,
+                width: "275px",
+                listStyle: "none",
+                padding: 0,
+                marginTop: "4px",
+                maxHeight: "300px",
+                overflowY: "auto",
+              }}
+            >
                 {searchResults.length > 0 ? (
                   searchResults.map((product) => (
                     <li
